@@ -11,3 +11,10 @@ wheels/
 Datasets/
 image.png
 .env
+
+q4_0-orca-mini-3b.gguf
+models/
+
+package-lock.json
+node_modules/
+package.json
