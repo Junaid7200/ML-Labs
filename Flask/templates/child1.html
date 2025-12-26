@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% block head%}
+<title>Child 1 Title</title>
+{% endblock %} 
+
+{% block body%}
+<h1 class="text-3xl font-bold underline">Hello world from child1.html!</h1>
+<div>
+    {% if tasks | length < 1 %}
+        <p>No tasks available</p>
+    {% else %}
+        <p>Tasks available: {{ tasks|length }}</p>
+        <table class="border">
+            <tr class="">
+                <th class="border px-4">Task</th>
+                <th class="border px-4">Added</th>
+                <th class="border px-4">Actions</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td class="border px-4">{{ task.content }}</td>
+                <td class="border px-4">{{ task.created.strftime('%Y-%m-%d %H:%M:%S')}}</td>
+                <td class="border px-4">
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br/>
+                    <a href="/edit/{{task.id}}">Edit</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+</div>
+<form action="/" method="POST">
+    <input class="border" type="text" name="content" placeholder="Content" />
+    <input class="border" type="submit" value="Submit">
+{% endblock%}
