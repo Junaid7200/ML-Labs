@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Edit Todo Task</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="text-3xl font-bold underline">Edit Task</h1>
+<form action="/edit/{{ task.id }}" method="POST" class="flex flex-col gap-4">
+    <input class="border px-4 py-2" type="text" name="content" value="{{ task.content }}" />
+    <input class="border px-4 py-2 bg-blue-500 text-white cursor-pointer" type="submit" value="Update Task">
+</form>
+{% endblock %}
