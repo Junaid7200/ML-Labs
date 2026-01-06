@@ -41,4 +41,5 @@ dependencies = [
     "faiss-cpu>=1.13.2",
     "langchain-community>=0.4.1",
     "gpt4all>=2.8.2",
+    "ultralytics>=8.3.241",
 ]
