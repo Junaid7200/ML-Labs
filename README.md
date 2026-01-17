@@ -4,3 +4,5 @@ This repo ontains all the work I did during the Machine Leraning course I comple
 - pandas, numpy, matplotlib, seaborn
 - sklearn, tensorflow, transformers
 - Flask, Streamlit
+- uv, ruff
+
